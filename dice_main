@@ -1,0 +1,146 @@
+package assignment2;
+
+public class maindice {
+    public static void main(String[] args) {
+        int i;
+        int[] StoredRolls;
+        StoredRolls = new int[11];
+
+        // Rolls n number of times, in this case 1000. Increments by one in slot within array.
+        for(i = 0; i < 1000; i++){
+            Dice dice = new Dice();
+            int currentRoll = dice.getFaceValue();
+            if(currentRoll == 2){
+                StoredRolls[0]++;
+            }
+            if(currentRoll== 3){
+                StoredRolls[1]++;
+            }
+            if(currentRoll == 4){
+                StoredRolls[2]++;
+            }
+            if(currentRoll == 5){
+                StoredRolls[3]++;
+            }
+            if(currentRoll == 6){
+                StoredRolls[4]++;
+            }
+            if(currentRoll== 7){
+                StoredRolls[5]++;
+            }
+            if(currentRoll == 8){
+                StoredRolls[6]++;
+            }
+            if(currentRoll == 9){
+                StoredRolls[7]++;
+            }
+            if(currentRoll == 10){
+                StoredRolls[8]++;
+            }
+            if(currentRoll == 11){
+                StoredRolls[9]++;
+            }
+            if(currentRoll == 12){
+                StoredRolls[10]++;
+            }
+
+        } // End of for loop
+
+        // Outputs first part of the assignment's output - the numerical value of the dice rolls amount.
+        for(i = 0; i < StoredRolls.length; i++){
+            System.out.println("Number of " + (i + 2) + "s are " + StoredRolls[i]);
+        }
+
+
+        // Beginning of the second, and last, part of the assignment.
+        // Checks for value after storing in array to be greater than set milestones.
+        // Creates and plots graph. x-axis = Number of occurrences.
+        //                          y-axis = Value of dice roll.
+
+        System.out.println("Graph");
+
+        System.out.print("175|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 175){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print("150|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 150){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print("125|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 125){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print("100|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 100){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print(" 75|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 75){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print(" 50|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 50){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print(" 25|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 25){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.print("  0|");
+        for(i = 0; i < StoredRolls.length; i++){
+            if(StoredRolls[i] > 0){
+                System.out.print("*  ");
+            } else {
+                System.out.print("   ");
+            }
+        }
+        System.out.println(" ");
+
+        System.out.println("    --------------------------------");
+        System.out.println("    2  3  4  5  6  7  8  9 10 11 12");
+
+    }
+}
